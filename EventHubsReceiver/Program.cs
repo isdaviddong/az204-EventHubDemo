@@ -12,15 +12,16 @@ namespace EventHubsReceiver
     {
         static async Task Main(string[] args)
         {
+
             // Create a blob container client that the event processor will use 
             BlobContainerClient storageClient = new BlobContainerClient(
-                "DefaultEndpointsProtocol=https;AccountName=teststorageforlogic2023;AccountKey=AGIHM6mm3H/vUaJftx1A6xH7ePGWQCasSmkU1SEEKVnRwbm5NVpZJEMToQIVeojMfuPCmaAV/oiJ+AStYjrGCA==;EndpointSuffix=core.windows.net", "testcon1");
+                "DefaultEndpointsProtocol=https;AccountName=____________;AccountKey=________________________;EndpointSuffix=core.windows.net", "testcon1");
 
             // Create an event processor client to process events in the event hub
             var processor = new EventProcessorClient(
                 storageClient,
                 EventHubConsumerClient.DefaultConsumerGroupName,
-                "Endpoint=sb://testeh2023.servicebus.windows.net/;SharedAccessKeyName=test1;SharedAccessKey=HAlVR258Fax2xULFCTHiniDBQF+XGdDEn+AEhAIuf/4=;EntityPath=myhub1",
+                "Endpoint=sb://____________.servicebus.windows.net/;SharedAccessKeyName=____________;SharedAccessKey=________________________;EntityPath=myhub1",
                 "myhub1");
 
             // Register handlers for processing events and handling errors

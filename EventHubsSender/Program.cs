@@ -18,8 +18,7 @@ namespace EventHubsSender
             // of the application, which is best practice when events are being published or read regularly.
             // TODO: Replace the <CONNECTION_STRING> and <HUB_NAME> placeholder values
             EventHubProducerClient producerClient = new EventHubProducerClient(
-                "Endpoint=sb://testeh2023.servicebus.windows.net/;SharedAccessKeyName=test1;SharedAccessKey=HAlVR258Fax2xULFCTHiniDBQF+XGdDEn+AEhAIuf/4=;EntityPath=myhub1",
-                "myhub1");
+                "Endpoint=sb://____________.servicebus.windows.net/;SharedAccessKeyName=____________;SharedAccessKey=____________;EntityPath=myhub1");
 
             // Create a batch of events 
             using EventDataBatch eventBatch = await producerClient.CreateBatchAsync();
